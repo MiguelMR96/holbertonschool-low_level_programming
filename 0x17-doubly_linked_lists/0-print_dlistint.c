@@ -1,12 +1,14 @@
 #include "lists.h"
 /**
  * print_recursive - print recursive the doubly list
- * 
+ * @element: element
+ * @counter: counter
+ * Return: counter, or recursion
  */
 size_t print_recursive(const dlistint_t *element, size_t counter)
 {
 	if (element == NULL)
-		return counter;
+		return (counter);
 	else
 	{
 		printf("%d\n", element->n);
@@ -22,5 +24,5 @@ size_t print_recursive(const dlistint_t *element, size_t counter)
 size_t print_dlistint(const dlistint_t *h)
 {
 	(void)*h;
-	return print_recursive(h, 0);
+	return (print_recursive(h, 0));
 }
