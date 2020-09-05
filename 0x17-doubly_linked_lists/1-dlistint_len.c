@@ -9,13 +9,12 @@ size_t recursion_count(const dlistint_t *h, size_t counter)
 {
 	if (h == NULL)
 		return (counter);
-	else
-	{
-		return (recursion_count(h->next, ++counter));
-	}
+
+	return (recursion_count(h->next, ++counter));
 }
+
 /**
- * dlistint_t - return number of elements in a linked list
+ * dlistint_len - return number of elements in a linked list
  * @h: head to doubly linked list
  * Return: number of elements
  */
