@@ -9,11 +9,9 @@ size_t print_recursive(const dlistint_t *element, size_t counter)
 {
 	if (element == NULL)
 		return (counter);
-	else
-	{
-		printf("%d\n", element->n);
-		return (print_recursive(element->next, ++counter));
-	}
+
+	printf("%d\n", element->n);
+	return (print_recursive(element->next, ++counter));
 }
 
 /**
