@@ -8,6 +8,9 @@ hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *vec;
 
+	if (size == 0)
+		return (NULL);
+
 	vec = malloc(sizeof(hash_table_t));
 	if (!vec)
 		return (NULL);
